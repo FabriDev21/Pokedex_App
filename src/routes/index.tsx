@@ -1,17 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { usePokemonList } from "../hooks/usePokemonList";
-import PokemonGrid from "../components/PokemonGrid";
-
+import PokemonGrid from "../components/pokemon/PokemonGrid";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 function Index() {
-    const {pokemon}=usePokemonList()
+  const { pokemon } = usePokemonList();
   return (
     <div>
-      <PokemonGrid pokemon={pokemon}/>
+      <PokemonGrid pokemon={pokemon} />
     </div>
   );
 }
